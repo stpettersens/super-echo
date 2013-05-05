@@ -21,7 +21,7 @@ class SuperEcho:
 				print(self.h.unescape(line.rstrip('\n')))
 			sys.exit(0)
 
-		if args[1][0] == "i": # Display info and usage.
+		if args[1][0] == 'i': # Display info and usage.
 			print(__doc__)
 
 		elif args[1][0] == 'a': # Array argument mode.
