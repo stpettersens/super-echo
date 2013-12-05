@@ -7,8 +7,8 @@ IO = secho
 make:
 	$(FREEZE) $(IO).py
 	make -f Makefile
-	rm -r -f Makefile *.o *.c
+	rm -f Makefile *.o *.c
 	strip $(IO)
 
-
-
+clean:
+	rm -f $(IO)
