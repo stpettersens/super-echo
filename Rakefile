@@ -16,5 +16,5 @@ task :clean do
 end
 
 task :test do
-	puts "dummy test"
+    puts "dummy test"
 end
