@@ -1,7 +1,7 @@
 #
 # Rakefile to build standalone `secho` Unix-like executable program.
 #
-freeze = "freeze"
+freeze = "python /usr/lib/python2.7/site-packages/pip/commands/freeze.py"
 io = "secho"
 
 task :default do
