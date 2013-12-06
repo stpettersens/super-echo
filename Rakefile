@@ -7,6 +7,7 @@ io = "secho"
 
 task :default do
     sh "#{freeze} #{io}.py"
+    sh "python secho.py test output - OK"
     #sh "make -f Makefile"
     #sh "strip #{io}"
     #sh "rm -f Makefile *.o *.c"
