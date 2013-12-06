@@ -3,7 +3,7 @@ python:
     - "2.7"
 
 # Command to install dependencies
-install: "pip install -r requirements.txt"
+install: "pip install freeze"
 
 # Command to build with `rake`
 script: rake default
