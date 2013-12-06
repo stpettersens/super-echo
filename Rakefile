@@ -1,7 +1,8 @@
 #
-# Rakefile to build standalone `secho` Unix-like executable program.
+# Rakefile to build standalone `secho` Unix-like executable program on Travis CI.
+# To build on your own system; please use the Makefile instead.
 #
-freeze = "python /usr/lib/python2.7/site-packages/pip/commands/freeze.py"
+freeze = "python /home/travis/virtualenv/python2.7/lib/python2.7/site-packages/commands/freeze.py"
 io = "secho"
 
 task :default do
