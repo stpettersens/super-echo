@@ -9,14 +9,14 @@ task :default => [:freeze, :compile]
 
 task :freeze do
     sh "#{freeze} #{io}.py"
-    sh "python secho.py python test output - OK"
+    sh "python #{io}.py python test output - OK"
 end
 
 task :compile do
     sh "make -f Makefile"
     sh "strip #{io}"
     sh "rm -f Makefile *.o *.c"
-    sh "secho compiled test output - OK"
+    sh "#{io} compiled test output - OK"
 end
 
 task :clean do
