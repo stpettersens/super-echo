@@ -7,9 +7,9 @@ io = "secho"
 
 task :default do
     sh "#{freeze} #{io}.py"
-    sh "make -f Makefile"
-    sh "strip #{io}"
-    sh "rm -f Makefile *.o *.c"
+    #sh "make -f Makefile"
+    #sh "strip #{io}"
+    #sh "rm -f Makefile *.o *.c"
 end
 
 task :clean do
