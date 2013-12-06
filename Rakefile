@@ -9,7 +9,7 @@ task :default => [:freeze, :compile]
 
 task :freeze do
     sh "python #{io}.py python test output - OK"
-    sh "#{freeze} #{io}.py"
+    sh "#{freeze}" #{io}.py"
 end
 
 task :compile do
