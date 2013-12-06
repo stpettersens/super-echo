@@ -8,10 +8,8 @@ io = "secho"
 task :default => [:freeze, :compile]
 
 task :freeze do
-    sh "cd /home/travis/virtualenv/python2.7/lib/python2.7/site-packages/pip/commands"
-    sh "ls -la"
-    #sh "python #{io}.py python test output - OK"
-    #sh "#{freeze} #{io}.py"
+    sh "python #{io}.py python test output - OK"
+    sh "#{freeze} #{io}.py"
 end
 
 task :compile do
