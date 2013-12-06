@@ -13,6 +13,7 @@ task :freeze do
 end
 
 task :compile do
+    sh "ls"
     #sh "make -f Makefile"
     #sh "strip #{io}"
     #sh "rm -f Makefile *.o *.c"
