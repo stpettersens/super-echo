@@ -6,7 +6,7 @@ Copyright 2013 Sam Saint-Pettersen
 Released under the MIT/X11 License.
 
 Usage: secho.py foo bar
-       secho.py a foo,bar
+       secho.py ! foo,bar
        cat foo.txt | secho.py
 """
 import sys
@@ -21,11 +21,11 @@ class SuperEcho:
 				print(self.h.unescape(line.rstrip('\n')))
 			sys.exit(0)
 
-		if args[1][0] == 'i': # Display info and usage.
+		if args[1][0] == '?': # Display info and usage.
 			print(__doc__)
 
-		elif args[1][0] == 'a': # Array argument mode.
-			lines = args[2].split(',')
+		elif args[1][0] == '!': # Array argument mode.
+			lines = args.split(',')
 			for line in lines:
 				print(self.h.unescape(line))
 		else:
