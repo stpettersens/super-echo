@@ -9,7 +9,7 @@ task :default => [:freeze, :compile]
 
 task :freeze do
     sh "python #{io}.py python test output - OK"
-    sh "#{freeze} #{ip.py} --target-dir dist"
+    sh "#{freeze} #{io}.py --target-dir dist"
 end
 
 task :compile do
