@@ -13,11 +13,8 @@ task :freeze do
 end
 
 task :compile do
-    sh "ls"
-    sh "make -f Makefile"
-    sh "strip #{io}"
-    sh "rm -f Makefile *.o *.c"
-    sh "./dist/#{io} compiled test output - OK"
+    sh "strip dist/#{io}"
+    sh "/dist/#{io} compiled test output - OK"
 end
 
 task :clean do
