@@ -5,14 +5,14 @@
 freeze = "cxfreeze"
 io = "secho"
 
-task :default => [:freeze, :compile]
+task :default => [:freeze, :compiled]
 
 task :freeze do
     sh "python #{io}.py python test output - OK"
     sh "#{freeze} #{io}.py --target-dir dist"
 end
 
-task :compile do
+task :compiled do
     sh "dist/#{io} compiled test output - OK"
 end
 
