@@ -14,7 +14,7 @@ end
 
 task :compile do
     sh "strip dist/#{io}"
-    sh "/dist/#{io} compiled test output - OK"
+    sh "dist/#{io} compiled test output - OK"
 end
 
 task :clean do
