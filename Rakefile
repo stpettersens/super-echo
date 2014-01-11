@@ -2,14 +2,14 @@
 # Rakefile to build standalone `secho` Unix-like executable program on Travis CI.
 # To build on your own system; please use `make` instead.
 #
-freeze = "pip freeze"
+freeze = "cxfreeze"
 io = "secho"
 
 task :default => [:freeze, :compile]
 
 task :freeze do
     sh "python #{io}.py python test output - OK"
-    sh "#{freeze} #{io}.py"
+    sh "#{freeze} #{ip.py} --target-dir dist"
 end
 
 task :compile do
@@ -17,7 +17,7 @@ task :compile do
     sh "make -f Makefile"
     sh "strip #{io}"
     sh "rm -f Makefile *.o *.c"
-    sh "./#{io} compiled test output - OK"
+    sh "./dist/#{io} compiled test output - OK"
 end
 
 task :clean do
