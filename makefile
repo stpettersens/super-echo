@@ -12,6 +12,3 @@ make:
 
 clean:
 	rm -f $(IO)
-
-test:
-	echo "dummy test"
