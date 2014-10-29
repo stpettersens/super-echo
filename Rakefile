@@ -5,7 +5,7 @@
 freeze = "cxfreeze"
 io = "secho"
 
-task :default => [:freeze, :compiled]
+task :default => [:freeze, :compiled, :clean]
 
 task :freeze do
     sh "python #{io}.py python test output - OK"
@@ -18,8 +18,4 @@ end
 
 task :clean do
     sh "rm -f #{io}"
-end
-
-task :test do
-    puts "dummy test"
 end
