@@ -3,7 +3,7 @@ python:
     - "2.7"
 
 # Command to install dependencies
-install: "pip install cx_Freeze"
+install: pip install cx_Freeze
 
 # Command to build with `rake`
 script: rake default
