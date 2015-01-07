@@ -1,0 +1,5 @@
+#
+# Appveyor CI configuration.
+#
+install: make dependencies
+# TODO
