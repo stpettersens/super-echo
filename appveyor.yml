@@ -4,9 +4,7 @@
 environment:
     matrix:
         - PYTHON: "C:/Python27"
-init:
-    - "ECHO %PYTHON%"
-
+        
 install:
     - ps: (new-object net.webclient).DownloadFile("http://raw.github.com/pypa/pip/master/contrib/get-pip.py", "C:/get-pip.py")
     - "%PYTHON%/python.exe C:/get-pip.py"
@@ -14,4 +12,11 @@ install:
     #- ps: "ls C:/Python27/Scripts"
 
 build_script:
-    - "%PYTHON%/python.exe %PYTHON%/Scripts/cxfreeze secho.py --target-dir dist 2> nul"
+    - "%PYTHON%/python.exe %PYTHON%/Scripts/cxfreeze secho.py --target-dir dist"
+
+test_script:
+    - "dist/secho.exe normal text OK"
+    - ps: "cat appveyor.yml | dist/echo"
+
+clean_script:
+    - ps: "rm -r -f dist"
