@@ -1,6 +1,7 @@
 #
 # Appveyor CI configuration.
 #
+
 environment:
     matrix:
         - PYTHON: "C:/Python27"
