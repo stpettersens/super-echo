@@ -1,7 +1,6 @@
 #
 # Appveyor CI configuration.
 #
-build: false
 environment:
     pip: "http://raw.github.com/pypa/pip/master/contrib/get-pip.py"
     matrix:
