@@ -15,7 +15,7 @@ dependencies:
 test:
 	sudo mv dist/${TARGET} /usr/bin 
 	$(TARGET) normal text OK
-	$(TARGET) ! array, test, OK
+	#$(TARGET) ! array, test, OK
 	cat .travis.yml | $(TARGET)
 
 clean:
