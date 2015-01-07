@@ -5,8 +5,8 @@ Copyright 2013 Sam Saint-Pettersen
 
 Released under the MIT/X11 License.
 
-Usage: secho.py foo bar
-       secho.py ! foo,bar
+Usage: secho foo bar
+       secho ! foo,bar
        cat foo.txt | secho.py
 """
 import sys
