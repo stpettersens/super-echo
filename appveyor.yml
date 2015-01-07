@@ -1,5 +1,5 @@
 #
 # Appveyor CI configuration.
 #
-install: make
+install: node
 # TODO
