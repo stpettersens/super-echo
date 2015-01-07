@@ -16,4 +16,4 @@ build_script:
 
 test_script:
     - "secho.exe normal text OK"
-    - ps: "cat appveyor.yml | secho.exe"
+    - ps: "cat appveyor.yml | ./secho.exe"
