@@ -11,7 +11,7 @@ install:
     - ps: (new-object net.webclient).DownloadFile("http://raw.github.com/pypa/pip/master/contrib/get-pip.py", "C:/get-pip.py")
     - "%PYTHON%/python.exe C:/get-pip.py"
     - "%PYTHON%/Scripts/pip.exe -q install cx_Freeze"
-    - ps: "ls C:/Python27/Scripts"
+    #- ps: "ls C:/Python27/Scripts"
 
 build_script:
-    - "cxfreeze secho.py --target-dir dist"
+    - "%PYTHON%/python.exe %PYTHON/Scripts/cxfreeze secho.py --target-dir dist"
