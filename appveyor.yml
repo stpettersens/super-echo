@@ -12,8 +12,8 @@ install:
     #- ps: "ls C:/Python27/Scripts"
 
 build_script:
-    - "%PYTHON%/python.exe %PYTHON%/Scripts/cxfreeze secho.py --target-dir dist"
+    - "%PYTHON%/python.exe %PYTHON%/Scripts/cxfreeze secho.py --target-dir ."
 
 test_script:
-    - "dist/secho.exe normal text OK"
-    - ps: "cat appveyor.yml | dist/echo"
+    - "secho.exe normal text OK"
+    - ps: "cat appveyor.yml | secho.exe"
